@@ -1,0 +1,35 @@
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+
+
+createChat({
+	webhookUrl: 'https://primary-production-48ea7.up.railway.app/webhook/dd41059f-97e7-4b6c-b485-66fc9825f890/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		‘Привет’!,
+		‘Я ‘бот поддержки. Протестируй меня и задай свои вопросы
+	],
+	i18n: {
+		en: {
+			title: ‘SupportBot,
+			subtitle: «Начни чат и я помогу тебе 24/7.",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: ‘Что тебя интересует?’,
+		},
+	},
+});
+
+</script>
